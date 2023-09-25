@@ -4,6 +4,7 @@ import style from './style.module.scss'
 import { useTranslation } from "react-i18next"
 import MVideo from "../../assets/LogoMVideo2.svg"
 import Logo from "../../assets/LogoFooter.png"
+import { Link } from 'react-router-dom'
 
 const textAnimation = {
     hidden: {
@@ -128,11 +129,11 @@ export default function Calculator({ onSubmitForm }) {
                             </div>
                         )}
                         <div className={style.logoMVideo}>
-                            <a href="https://www.mvideo.ru/">
-                                <img src={MVideo} alt="" />
+                            <div>
+                                <Link to="https://www.mvideo.ru/"><img src={MVideo} alt="" /></Link>
                                 <p>совместно с</p>
-                                <img className={style.logo} src={Logo} alt="" />
-                            </a>
+                                <Link to="/"><img className={style.logo} src={Logo} alt="" /></Link>
+                            </div>
                         </div>
                     </motion.div>
 

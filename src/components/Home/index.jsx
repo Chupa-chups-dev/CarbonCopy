@@ -60,7 +60,7 @@ export default function Home() {
                         }}>en</button>
                     </div>
                     <div className={style.logo}>
-                        <img className={style.logo1} src={Logo} alt="Logo" />
+                        <Link to='/'><img className={style.logo1} src={Logo} alt="Logo" /></Link>
                         <img className={style.logo2} src={Logo2} alt="Logo" />
                     </div>
                     <motion.h1  custom={1} variants={textAnimation} className={style.title1}>{t('home__title1')}</motion.h1>
