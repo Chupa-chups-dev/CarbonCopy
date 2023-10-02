@@ -7,6 +7,7 @@ import Logo from "./../../assets/Logo.png";
 import Logo2 from "./../../assets/Logo2.png";
 import { Link } from 'react-router-dom'
 import Logo3 from "./../../assets/LogoMVideo.svg";
+import Arrow from "./../../assets/fi-rr-arrow-right.svg";
 const textAnimation = {
   hidden: {
     y: -100,
@@ -29,7 +30,12 @@ export default function Home() {
         viewport={{ amount: 0.2, once: true }}
         className={style.home}
       >
-        <div className="container">
+        <div className={style.container}>
+          <div className={style.BackToHome}>
+              <Link className={style.link} to="/">Carbon Copy</Link>
+              <img src={Arrow} alt="" />
+              <Link to="https://www.mvideo.ru/">MVideo</Link>
+          </div>
           <div className={style.languages}>
             <button
               onClick={() => {
@@ -51,7 +57,9 @@ export default function Home() {
             <Link to="/">
               <img className={style.logo1} src={Logo} alt="Logo" />
             </Link>
-            <img className={style.logo3} src={Logo3} alt="Logo" />
+            <Link to="/">
+              <img className={style.logo3} src={Logo3} alt="Logo" />
+            </Link>
             <img className={style.logo2} src={Logo2} alt="Logo" />
           </div>
           <motion.h1
